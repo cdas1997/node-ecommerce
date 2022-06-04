@@ -1,0 +1,49 @@
+<%-include('../Includes/Header.ejs')%>
+    <link rel="stylesheet" href="/CSS/prod.css">
+    </head>
+
+    <body>
+        <%-include('../Includes/Navigation.ejs')%>
+ 
+     <h1>Admin View Page</h1>
+    <%if(data.length>0){%>
+            <table >
+                <tr>
+                    <th>Product Title</th>
+                    <th>Product Price</th>
+                    
+                    <th>Product Description</th>
+                    <th>Image</th>
+                    <th>Edit</th>
+                    <th>Delete/get</th>
+                    <th>Delete/post</th>
+                </tr>
+                <%for(let x of data){%>    
+              <tr>  
+                <td ><%=x.pTitle %></td>
+                <td  ><%=x.pPrice %></td>
+                <td  ><%=x.pDescription %></td>
+                <td  ><img src="../../<%=x.pImage%>" alt="" class="imageadmin"> </td>
+                <td><a href="/editProduct/<%=x._id%>">EDIT</a></td>
+                <td><a href="/deleteProduct/<%=x._id%>">DELETE</a></td>
+                <td>
+                    <form action="/postDeletedValue" method="POST">
+                        <input type="hidden"  name="_csrf" value="<%=csrf_token%>">
+                        <input type="hidden"  name="product_id" value="<%=x._id%>">
+                        <button type="submit">DELETE</button>
+                    </form></td>
+            </tr>
+            <%}%>
+            </table>
+    
+           
+    
+    <%}else{%>
+        <h1>DATA NOT FOUND</h1>
+        <%}%>
+                                <%-include('../Includes/Footer.ejs')%>
+                                
+
+
+
+      

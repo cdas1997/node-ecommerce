@@ -1,0 +1,76 @@
+.card{
+ 
+    background-color: rgb(168, 172, 177);
+    border: 1px solid red;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-top: 10px;
+
+}
+
+h1{
+    margin-left: 430px;
+    color: rgb(251, 9, 9);
+}
+.btn{
+    margin-left: 130px;
+}
+.search{
+    color:  rgb(251, 9, 9);
+    margin-left: 800px;
+    margin-top: 30px;
+    width: 280px;
+    height: 40px;
+    border-radius: 2px;
+
+}
+.search:hover{
+    color:  rgb(251, 9, 9);
+    margin-left: 800px;
+    margin-top: 30px;
+    width: 280px;
+    height: 40px;
+    border-radius: 2px;
+    border: 2px solid rgb(251, 9, 9);
+}
+.searchbtn{
+    height: 40px;
+    width: 90px;
+    background-color: transparent;
+    border: 2px solid black;
+    color:  rgb(251, 9, 9);
+   
+}
+.searchbtn:hover{
+    height: 40px;
+    width: 90px;
+  color: black;
+    border: 2px solid rgb(251, 9, 9);
+}
+.filter{
+  margin-left: 50px;
+  margin-bottom: 30px;
+  font-size: 22px;
+  
+  
+}
+.filter1{
+    color: rgb(251, 9, 9);
+    text-decoration: none;
+    font-size: 18px;
+ font-family: Georgia, 'Times New Roman', Times, serif;
+
+  max-width: 250px;
+}
+.imageview{
+    height: 180px;
+}
+.details{
+    margin-bottom: 20px;
+    background-color: rgb(251, 9, 9) !important;
+}
+/* .product{
+    background-color: rgb(231, 229, 229);
+} */
+

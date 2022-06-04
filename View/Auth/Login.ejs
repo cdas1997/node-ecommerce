@@ -1,0 +1,66 @@
+<%-include('../Includes/Header.ejs')%>
+<link rel="stylesheet" href="/CSS/login.css">
+</head>
+<body>
+
+<%-include('../Includes/Navigation.ejs')%>
+<h1>Login</h1>
+
+
+<div class="container">
+
+  <form action="/logPostValue" method="POST">
+    
+      <input type="hidden"  name="_csrf" value="<%=csrf_token%>">
+     
+      <div class="row">
+        <div class="col-25">
+          <label >Email</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="email" value="<% if(cookie_data.Cookie_data){%> <%=cookie_data.Cookie_data.emailCookie%> <%}%>" name="u_email" placeholder="Your email..">
+        </div>
+      </div>
+ 
+      <div class="row">
+        <div class="col-25">
+          <label >Password</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="password" name="u_pass" placeholder="Enter password..">
+        </div>
+      </div>
+      <div>
+        <input type="checkbox"  name="checked" >
+        <label >Remember me?</label>
+      </div>
+   
+
+      <%if(errorMsg){%>
+        <div class="err"><%=errorMsg%></div>
+     <%}%>
+    
+      <div class="row">
+       
+        <input type="submit" value="Login" class="submit">
+      
+      </div>
+      <div class="row">
+      <h5 class="log1">Not Registered yet? <a class="log2" href="/registration">Register here</a></h5>
+    </div>
+    </form>
+  
+  </div>
+ 
+  <%if(error.length>0){%>
+    <%for(let err of error){%>  
+<div><h6 class="erormsg"><%=err.msg%></h6></div>
+    <%}%>
+    <%}%>
+<%-include('../Includes/Footer.ejs')%>
+
+
+
+
+
+

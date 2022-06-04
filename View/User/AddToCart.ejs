@@ -1,0 +1,81 @@
+<%-include('../Includes/Header.ejs')%>
+<link rel="stylesheet" href="/CSS/addToCart.scss" type="text/css">
+</head>
+<body>
+
+    <%-include('../Includes/Navigation.ejs')%>
+
+    <main>
+        <h1>Shoping Cart</h1>
+        <% if (products.length > 0) { %>
+                <table >
+                 
+                    <% products.forEach(p => { %>  
+                  
+        
+                    <tr>
+                        <div class="row" id="cartborder" >
+                            <div class="col" id="proddetails1">
+                              <img src="../../<%=p.productId.pImage %>" class="card-img-top" id="proimg" alt="Image">
+                            </div>
+                            <div class="col" id="proddetails2">
+                              <div class="card-body">
+                                <h5 class="card-title"><%= p.productId.pTitle %></h5>
+                                <p class="card-text"><%= p.productId.pDescription %></p>
+                                
+                                <h4 class="card-title">Rs.<%= p.productId.pPrice %></h4>
+                          
+                    
+                              
+                                
+                              </div>
+                            </div>
+                         
+        
+                            <div class="col" id="proddetails3">
+                              <h5 id="qty1" >Quantity</h5>
+                              <!-- <button class="qty3"><a class="qty2" href="/increase">+</a></button> -->
+                              <p id="qty" class="card-title"><%= p.quantity %></p>
+                              <!-- <button class="qty3"><a class="qty2" href="/decrease">-</a></button> -->
+                             
+                        </div>
+        
+                        <div class="col" id="proddetails3">
+                            <form action="/cart-delete-item" method="POST">
+                                <input type="hidden" value="<%= p.productId._id %>" name="productId">
+                                <input type="hidden" name="_csrf" value="<%= csrf_token %>">
+                                <button class="btnc" type="submit">Remove</button>
+                            </form>
+                           
+                    </div>
+                                
+                                     
+                          </div>
+                      </tr>
+                 
+                  
+                      <% }) %>
+                </table>
+       
+    
+        <div class="orderb">
+     
+            <a class="order-btn1" href="/checkout" style="text-decoration:none;">Order Now</a>
+         
+          </div>
+          <% } else { %>
+            <h1>Your Cart is Empty!</h1>
+            <% } %>
+    </main>
+
+
+    <%-include('../Includes/Footer.ejs')%>
+
+
+
+
+
+
+
+
+

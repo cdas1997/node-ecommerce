@@ -1,0 +1,67 @@
+#foot{
+    background-color: black;
+    max-height: 240px;
+    /* border: 1.5px solid rgb(251, 9, 9); */
+    margin-top: 36px;
+}
+#foot1{
+    margin-left: 160px;
+    margin-top: 0px;
+}
+#foot2{
+    margin-right: 220px;
+  
+}
+
+#footbtn{
+    
+ 
+    gap: 0px;
+}
+.form-control{
+ float: left;
+ width: 260px;
+
+    margin-right: 10px;
+}
+#foot3{
+    margin-left: 160px;
+    margin-bottom: 0px;
+    max-height: 80px !important;
+ 
+}
+.foot-text{
+    color: white;
+}
+/* .nav-item{
+    text-decoration: none !important;
+} */
+
+#foot-tex2{
+    color: rgb(111, 180, 200) !important;
+}
+#foot-tex3{
+    color: rgb(218, 81, 124) !important;
+}
+#foot-tex4{
+    color: rgb(51, 14, 174);
+}
+#logo{
+   
+    color: rgb(66, 155, 207);
+    margin-right: 20px;
+}
+#logo1{
+   
+    color: rgb(206, 45, 160);
+    margin-right: 20px;
+}
+#logo2{
+   
+    color: rgb(90, 19, 233);
+    margin-right: 10px;
+}
+.fa-bag-shopping{
+    color: red;
+    background-color: red;
+}

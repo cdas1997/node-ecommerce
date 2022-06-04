@@ -1,0 +1,167 @@
+
+.cart__item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin: auto;
+  width: 40rem;
+  max-width: 90%;
+  margin-top:12px;
+}
+
+.cart__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin-bottom: 1rem;
+}
+
+.cart__item h1,
+.cart__item h2 {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.orderb{
+ 
+
+  background-color: rgb(252, 26, 26);
+  color:white;
+  margin-left: 27rem;
+  padding-bottom: 2rem;
+  border: 1px solid black;
+ padding-top: 22px;
+ width: 500px !important;
+ margin-top: 20px;
+ border: solid 2px ;
+ border-radius: 5px;
+
+ 
+ 
+}
+.order-btn1{
+  color: white;
+  margin-left: 11rem;
+  font-size: 25px;
+}
+.btnc{
+ 
+  background-color: red;
+  color: red;
+  background: transparent;
+  margin-top: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h3{
+  
+  color: rgb(251, 9, 9);
+  text-align: center;
+}
+
+h1{
+
+  color: rgb(251, 9, 9);
+  text-align: center;
+  margin-bottom: 30px;
+}
+h2{
+ margin-left: 800px;
+}
+.btn{
+  margin-left: 130px;
+}
+.row{
+  margin-left: 70px;
+  margin-right: 70px;
+
+
+}
+#cartborder{
+  border: 1px solid red;
+  margin-bottom: 2px;
+}
+
+#proddetails{
+  margin-top: 50px;
+  
+  margin-bottom: 30px;
+
+ 
+
+}
+#proimg{
+  max-height: 150px;
+  width: 260px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+
+}
+
+
+#proddetails1{
+  background-color: transparent;
+  background-color:  rgb(231, 229, 229);
+  margin-left: 10px;
+  
+}
+#proddetails2{
+
+   background-color:  rgb(231, 229, 229);
+   margin-top: 0px;
+}
+#proddetails3{
+
+  background-color:  rgb(231, 229, 229);
+  margin-top: 0px;
+}
+
+#qty{
+  margin-left: 15px;
+  color: red;
+  background: transparent;
+ 
+  border: solid 1px black;
+  width: 40px;
+  
+  padding: 15px;
+}
+#qty1{
+
+  margin-top: 30px;
+
+}
+.rmv{
+  margin-top: 40px;
+  text-decoration: none;
+  background: transparent;
+}
+.rmv1{
+  text-decoration: none;
+  color: red;
+}
+.qty2{
+  text-decoration: none;
+  font-size: large;
+  color: red;
+}
+.qty3{
+  width: 60px;
+  margin-left: 10px;
+}

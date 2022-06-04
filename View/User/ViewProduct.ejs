@@ -1,0 +1,68 @@
+<%-include('../Includes/Header.ejs')%>
+    <link rel="stylesheet" href="/CSS/userproduct.css">
+    </head>
+
+    <body>
+        <%-include('../Includes/Navigation.ejs')%>
+        <div class="product">
+          <form action="/searchData" method="POST">
+            <input type="hidden"  name="_csrf" value="<%=csrf_token%>">
+      
+            <input type="text" name="search" class="search" placeholder="      Search Product by title...">
+            <button type="submit" class="searchbtn">Search</button>
+          </form>
+          <div class="filter">
+            <label ><strong>  <i class="fa fa-filter"></i> Filter Products By:</strong> </label><br>
+          
+            <a href="/viewProduct/Pprice" class="filter1">Product Price(Low to High)<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="black" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+            </svg></a><br>
+            <a href="/viewProduct/PpriceHL" class="filter1">Product Price(High to Low)<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="black" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+            </svg></a><br>
+      
+          </div>
+          
+      <%if(data.length>0){%>
+      
+      <div class="row" >
+        <%for(let x of data){%> 
+        <div class="col-sm-3 col-lg-4" >
+        
+          <div class="card h-80 w-80">
+            <img src="../../<%=x.pImage %>" class="card-img-top imageview" alt="Image">
+            <div class="card-body">
+              <h5 class="card-title"><%=x.pTitle %></h5>
+            <h5 class="card-title">₹<%=x.pPrice %></h5>
+            <p class="card-text"><%=x.pDescription %></p>
+           
+            </div>
+            <div>
+              <a href="/productDetails/<%=x._id%>"class="btn btn-danger details">DETAILS</a>
+            
+            </div>
+          </div>
+         
+        </div>
+        <%}%>
+      </div>
+      
+      
+      <%}else{%>
+          <h1>DATA NOT FOUND</h1>
+          <%}%>
+      
+        </div>
+            <%-include('../Includes/pagination.ejs')%>
+          
+             <%-include('../Includes/Footer.ejs')%>
+   
+                                
+
+
+                                
+                                
+                                
+                                 
+                                
+                                                              

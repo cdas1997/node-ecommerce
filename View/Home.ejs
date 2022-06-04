@@ -1,0 +1,14 @@
+<%-include('./Includes/Header.ejs')%>
+<link href="../CSS/home.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <%-include('./Includes/Navigation.ejs')%>
+    <%if(isAuthenticated){%>
+      <h2>Hello,<%=User.uFname %></h2>  <h1>Welcome to home page....!</h1>
+        <%}%>
+    <%if(!isAuthenticated){%>
+        <h1> Welcome to home page....!</h1>
+        <%}%>
+    
+    <%-include('./Includes/Footer.ejs')%>

@@ -1,0 +1,70 @@
+<%-include('../Includes/Header.ejs')%>
+<link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+
+<%-include('../Includes/Navigation.ejs')%>
+<div >
+  <h1 class="text10">Hello ADMIN, Please Add Products Here....!</h1>
+</div>
+<div class="container" id="form1">
+ 
+      <form action="/postValue" method="POST"  enctype="multipart/form-data" >
+
+          <input type="hidden"  name="_csrf" value="<%=csrf_token%>">
+      
+
+        <div class="row">
+          <div class="col-25">
+              <label for="title" class="label1">Product Title</label>
+          </div>
+          <div class="col-75">
+              <input type="text" class="input2" name="p_title" placeholder="Enter Product Title">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+              <label for="price"  class="label1">Product Price</label>
+          </div>
+          <div class="col-75">
+              <input type="number" class="input2" name="p_price" placeholder="Enter Product Price">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+              <label for="des"  class="label1">Product Description</label>
+          </div>
+          <div class="col-75">
+              <input type="text" class="input3" name="p_desc" placeholder="Enter Product Description">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+              <label for="img"  class="label1">Product Image</label>
+          </div>
+          <div class="col-75">
+              <input type="file" class="input3" name="p_img" placeholder="Upload Image">
+          </div>
+        </div>
+
+       
+       
+      
+        <div class="row">
+          <input type="submit"  class="input1" value="Add Product">
+         
+        </div>
+      </form>
+    </div> 
+
+<%-include('../Includes/Footer.ejs')%>
+
+
+
+
+
+
+  

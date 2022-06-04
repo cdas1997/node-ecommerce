@@ -1,0 +1,41 @@
+<%-include('../Includes/Header.ejs')%>
+<link rel="stylesheet" href="../../CSS/orders.css" type="text/css">
+</head>
+<body>
+
+    <%-include('../Includes/Navigation.ejs')%>
+    <h1 class="ortext">All Orders</h1>
+        <main>
+            <% if (orders.length <= 0) { %>
+                <h1 class="ortext">We Don't Have Any Order For You Right Now!</h1>
+            <% } else { %>
+                <ul class="orders">
+                    <% orders.forEach(order => { %>
+                        <li class="orders__item">
+                            <h1>Order - # <%= order._id %>- <a href="/orders/<%= order._id %>">Download Invoice</a></h1>
+                            <ul class="orders__products">
+                                <% order.products.forEach(p => { %>
+                                    <img src="../../<%=p.product.pImage %>" class="card-img-top" id="proimg" alt="Image">
+                                    <li class="orders__products-item"><%= p.product.pTitle %> <br><h1>Quantity-  <%= p.quantity %></h1> </li>
+
+
+                                <li>
+                                    
+                                    <form action="/postDeleteOrder" method="POST">
+                                        <input type="hidden"  name="_csrf" value="<%=csrf_token%>">
+                                        <input type="hidden"  name="orderId" value="<%= order._id %>">
+                                        <button class="obtn" type="submit">DELETE ORDER</button>
+                                    </form>
+                                </li>
+                                   
+                                   
+                                  
+                                <% }) %>
+                            </ul>
+                        </li>
+                     
+                    <% }) %>
+                </ul>
+            <% } %>
+        </main>
+        <%-include('../Includes/Footer.ejs')%>

@@ -1,0 +1,93 @@
+<%-include('../Includes/Header.ejs')%>
+<link rel="stylesheet" href="../../CSS/cart.css" type="text/css">
+ </head>
+<body>
+
+    <%-include('../Includes/Navigation.ejs')%>
+        <main>
+
+            <table >
+                 
+                <% products.forEach(p => { %>  
+              
+    
+                <tr>
+                    <div class="row" id="cartborder" >
+                        <div class="col" id="proddetails1">
+                          <img src="../../<%=p.productId.pImage %>" class="card-img-top" id="proimg" alt="Image">
+                        </div>
+                        <div class="col" id="proddetails2">
+                          <div class="card-body">
+                            <h5 class="card-title"><%= p.productId.pTitle %></h5>
+                            <p class="card-text"><%= p.productId.pDescription %></p>
+                            
+                            <h4 class="card-title">Rs.<%= p.productId.pPrice %></h4>
+                      
+                
+                          
+                            
+                          </div>
+                        </div>
+                        <div class="col"  id="proddetails3">
+                           
+                            <form action="/addOne" method="post">
+                                    <input type="hidden" name="_csrf" value="<%= csrf_token %>">
+                                    <button id="qty1" type="submit" >+</button>
+                                <input type="hidden" name="productId" value="<%= p.productId._id%>">
+                            </form>
+    
+                                 <h2 class="qty5"><%= p.quantity %></h2>
+    
+                                 <form action="/removeOne" method="POST">
+                                    <input type="hidden" name="_csrf" value="<%= csrf_token %>">
+                                    
+                                    <button id="qty6" type="submit"  >-</button>
+                                    
+                                    <input type="hidden" value="<%= p.productId._id %>" name="productId">
+                               
+                                </form>
+                           
+                            </div>
+    
+                      
+<!--     
+                    <div class="col" id="proddetails3">
+                        <form action="/cart-delete-item" method="POST">
+                            <input type="hidden" value="<%= p.productId._id %>" name="productId">
+                            <input type="hidden" name="_csrf" value="<%= csrf_token %>">
+                            <button class="btnc" type="submit">Remove</button>
+                        </form>
+                       
+                </div> -->
+                            
+                                 
+                      </div>
+                  </tr>
+             
+              
+                  <% }) %>
+            </table>
+
+
+          
+            <div class="centered1">
+                <h2>Total: ₹<%= totalSum %></h2>
+            </div>
+            <div class="centered">
+                <form action="/create-order" method="POST">
+                    <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="pk_test_ygYx6vbLWjTnKZX9m9Kaw7kf00TxARzp7b"
+                        data-amount="<%= totalSum * 100 %>"
+                        data-name="Your order"
+                        data-description="All ordered items"
+                        data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                        data-locale="auto"
+                        data-currency="INR">
+                    </script>
+                </form>
+            </div>
+        </main>
+        
+
+        <%-include('../Includes/Footer.ejs')%>

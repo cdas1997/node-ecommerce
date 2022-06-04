@@ -1,0 +1,56 @@
+
+h3{
+  
+    color: rgb(251, 9, 9);
+    text-align: center;
+}
+.btn{
+    margin-left: 130px;
+}
+.row{
+    margin-left: 70px;
+    margin-right: 70px;
+
+}
+
+#proddetails{
+    margin-top: 50px;
+    
+    margin-bottom: 30px;
+  
+   
+
+}
+#proimg{
+    max-height: 320px;
+ 
+}
+
+
+.cartbuy{
+float: left;
+display: flex;
+margin-top: 10px;
+}
+.cartbuy1{
+    margin-right: 20px;
+    background-color: transparent;
+    height: 45px;
+    border:2px solid rgb(251, 9, 9) ;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+.card-body{
+    margin-top: 20px;
+}
+#proddetails1{
+    background-color: transparent;
+    background-color:  rgb(231, 229, 229);
+    margin-left: 10px;
+    
+}
+#proddetails2{
+ 
+     background-color:  rgb(231, 229, 229);
+     margin-top: 0px;
+}

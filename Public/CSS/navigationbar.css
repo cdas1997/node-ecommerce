@@ -1,0 +1,51 @@
+#navbar{
+ 
+    background-color: black !important;
+    
+}
+.active{
+    background-color: rgb(251, 9, 9);
+}
+#logout{
+    background-color: rgb(251, 9, 9);
+}
+.nav-item:hover{
+text-decoration: underline;
+text-decoration-color: rgb(251, 9, 9) !important;
+
+}
+#navdesign{
+    margin-left: 340px;
+
+}
+#nav-link1{
+    color: white !important;
+    margin-right: 2px;
+    margin-left: 4px;
+}
+.dropdown-item{
+    color: red;
+}
+.vertical-separator {
+    display: inline-block !important;
+    background-color: rgb(189, 34, 86) !important;
+    line-height: 8.5 !important;
+    height: 35px;
+    vertical-align: middle !important;
+    border-left: 2px solid #ff0000 !important;
+   
+    margin-left: 5px;
+    margin-top: 5px;
+    
+}
+.span{
+    display: inline-block !important;
+    background-color: rgb(189, 34, 86) !important;
+    line-height: 8.5 !important;
+    height: 45px;
+    vertical-align: middle !important;
+   
+    margin-left: 10px;
+    margin-top: 8px;
+    margin-right: 4px;
+}
